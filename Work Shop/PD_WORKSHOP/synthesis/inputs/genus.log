@@ -1,0 +1,50 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 20.11-s111_1, built Mon Apr 26 02:27:38 PDT 2021
+Options: 
+Date:    Mon Sep 21 14:57:15 2026
+Host:    cad5 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (4cores*8cpus*1physical cpu*Intel(R) Core(TM) i3-10100F CPU @ 3.60GHz 6144KB) (7874988KB)
+PID:     8223
+OS:      Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (7 seconds elapsed).
+
+WARNING: This version of the tool is 1973 days old.
+@genus:root: 1> set_units -time ns -capacitance fF
+Error   : No designs are available. A design must first be read in and elaborated. [TUI-10] [set_units]
+        : There is no design here.
+        : A design must first be read in with 'read_hdl' command and elaborated with 'elaborate' command.
+Failed on find_unique_design
+@genus:root: 2> create_clock -name "mclk" -period 5.4 [get_ports clk_i]
+Error   : No designs are available. A design must first be read in and elaborated. [TUI-10] [get_ports]
+        : There is no design here.
+Failed on find_unique_design
+@genus:root: 3> 
+@genus:root: 3> # set input delay
+@genus:root: 4> set_input_delay 1 $po -clock vclk
+can't read "po": no such variable
+@genus:root: 5> 
+@genus:root: 5> set output delay
+delay
+@genus:root: 6> set_output_delay 1 [all_outputs] -clock vclk
+Error   : No designs are available. A design must first be read in and elaborated. [TUI-10] [all_outputs]
+        : There is no design here.
+Failed on find_unique_design
+@genus:root: 7> 
+@genus:root: 7> set_db init_lib_search_path ./inputs
+  Setting attribute of root '/': 'init_lib_search_path' = ./inputs
+1 ./inputs
+@genus:root: 8> gvim memory.v
+invalid command name "gvim"
